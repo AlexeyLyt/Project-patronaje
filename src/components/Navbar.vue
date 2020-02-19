@@ -1,5 +1,7 @@
 <template>
+<b-container class="container-nav" fluid>
   <vue-navigation-bar :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar>
+</b-container>
 </template>
 
 <script>
@@ -190,6 +192,16 @@ body {
 }
 .vnb {
   font-family: "Montserrat", sans-serif;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media (max-width: 1200px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media (max-width: 992px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .button-red {
     background: #ff3b30;
     &:hover {
@@ -240,5 +252,9 @@ body {
 }
 .vnb__popup__bottom__sub-menu-options__option {
   text-align: left;
+}
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 </style>

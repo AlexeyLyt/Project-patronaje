@@ -15,12 +15,24 @@ Vue.use(BootstrapVueIcons)
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 
-import SmoothScrollbar from 'vue-smooth-scrollbar'
-Vue.use(SmoothScrollbar)
+import VueSidebarMenu from 'vue-sidebar-menu'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+Vue.use(VueSidebarMenu)
+
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// library.add(faUserSecret)
+
+// Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+// import SmoothScrollbar from 'vue-smooth-scrollbar'
+// Vue.use(SmoothScrollbar)
+
 // SmoothScrollbar.updatePluginOptions('overscroll', {
 //   effect: 'glow',
 // })
-
 
 Vue.config.productionTip = false
 
