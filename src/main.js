@@ -5,11 +5,11 @@ import router from './router'
 import VueNavigationBar from "vue-navigation-bar";
 Vue.component("vue-navigation-bar", VueNavigationBar);
 
-import { BootstrapVue, BootstrapVueIcons, TabsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+Vue.use(BootstrapVue, BootstrapVueIcons)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue, BootstrapVueIcons, TabsPlugin)
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
