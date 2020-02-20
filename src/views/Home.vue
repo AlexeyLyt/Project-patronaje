@@ -1,8 +1,14 @@
 <template>
   <div id="scroll-area">
     <!-- <vue-scroll :ops="ops"> -->
-    <Navbar />
-    <Slider />
+    <!-- <div class="header-test"> -->
+      <!-- <span></span>
+      <span></span>
+      <span></span>
+      <span></span> -->
+      <Navbar />
+      <Slider />
+    <!-- </div> -->
     <transition name="fade">
       <sidebar-menu
         v-if="this.scrolled"
@@ -234,23 +240,31 @@ export default {
 </script>
 
 <style lang="scss">
+
+// background-header-test
+
+// .header-test {
+//   position: relative;
+//   span {
+//     position: absolute;
+//   }
+// }
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s !important;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
   opacity: 0 !important;
 }
-.vsm--list {
-  padding-top: 64px;
-}
 .v-sidebar-menu {
-  // transform: translateX(-50px);
-  // left: -50px;
-  // width: 50px !important;
-  // position: relative;
-  // opacity: 0;
-  // transform: translateX(0px) !important;
   transition: all 2s;
+  height: 65vh !important;
+  margin-top: 6.6vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  .vsm--toggle-btn {
+    border-bottom-right-radius: 20px;
+  }
 }
 #scroll-area {
   width: 100%;
