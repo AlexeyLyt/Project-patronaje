@@ -1,14 +1,30 @@
 <template>
-  <div class="main">
-    <svg viewBox="0 0 130 130">
-      <path class="hover-fillLight" fill="#76E5A2" d="M65 10c30.376 0 55 24.624 55 55s-24.624 55-55 55-55-24.624-55-55 24.624-55 55-55z"></path>
-      <path fill="#FFF" d="M102.274 27.78v-.002c-9.628-9.615-22.968-15.526-37.69-15.408-28.292.228-51.557 23.072-52.238 51.32-.22 9.175 1.915 17.832 5.84 25.416.1.192.317.29.526.24.003 0 .006 0 .01-.002a.462.462 0 0 0 .324-.616c-5.15-13.598-2.25-29.54 8.713-40.488 14.915-14.898 39.102-14.898 54.02 0L48.25 81.725c14.917 14.897 39.104 14.897 54.022 0 14.916-14.897 14.917-39.048.002-53.945z"></path>
-      <path class="hover-fillDark" fill="#159570" d="M88.198 58.794c3.435 12.802-4.173 25.96-16.992 29.39-12.82 3.43-25.997-4.166-29.43-16.968-3.436-12.802 4.17-25.96 16.99-29.39 12.82-3.43 25.997 4.166 29.43 16.968z"></path>
-    </svg>
-    <div class="item">1 блок</div>
-    <div class="item">2 блок</div>
-    <div class="item">3 блок</div>
-    <div class="item">4 блок</div>
+  <div class="first-section">
+    <b-container class="container-fs" lg>
+      <header>
+        <h2>Security and compliance at the core</h2>
+      </header>
+      <section class="about-us">
+        <div>
+          <article class="content">
+            <h2 class="content-uppercaseTitle">Comprehensive security</h2>
+            <p class="content-text">Data security is of utmost importance to Stripe. We invest heavily in securing our infrastructure in close partnership with world-class security experts.</p>
+            <p class="content-a">
+              <a href="#" class="content-link">Security at Stripe</a>
+            </p>
+          </article>
+          <figure>
+            <ul>
+              <li>All card numbers are encrypted on disk with AES-256. Decryption keys are stored on separate machines.</li>
+              <li>Stripe’s infrastructure for storing, decrypting, and transmitting card numbers runs in separate hosting infrastructure, and doesn’t share any credentials with Stripe’s primary services.</li>
+            </ul>
+          </figure>
+        </div>
+      </section>
+      <section class="about-us">
+
+      </section>
+    </b-container>
   </div>
 </template>
 
@@ -33,4 +49,38 @@ export default {
 </script>
 
 <style lang="scss">
+.first-section {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  margin-top: 120px;
+  .container-fs {
+    header {
+      max-width: 450px;
+      text-align: left;
+      @media (min-width: 670px) {
+        padding-bottom: 60px;
+      }
+      h2 {
+        font-size: 42px;
+        line-height: 52px;
+      }
+    }
+    .about-us div {
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 0;
+      }
+    }
+  }
+}
+
+.about-us > div {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 670px) {
+    flex-direction: row;
+  }
+}
 </style>
