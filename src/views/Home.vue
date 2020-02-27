@@ -21,6 +21,7 @@
       />
     </transition>
     <FirstSection />
+    <SecondSection />
     <!-- </vue-scroll> -->
   </div>
 </template>
@@ -29,13 +30,14 @@
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
 }
-import Slider from "@/components/Slider.vue";
+import Slider from "@/components/HomePage/Slider.vue";
 import Navbar from "@/components/Navbar.vue";
-import FirstSection from "@/components/FirstSection.vue";
+import FirstSection from "@/components/HomePage/FirstSection.vue";
+import SecondSection from "@/components/HomePage/SecondSection.vue"
 /* eslint-disable no-console */
 export default {
   name: "app",
-  components: { Slider, Navbar, FirstSection },
+  components: { Slider, Navbar, FirstSection, SecondSection },
   props: {
     // menu: {
     //   type: Array,
@@ -281,5 +283,13 @@ export default {
   z-index: 200;
   // background: black;
   top: 0;
+}
+.vsm--link_hover,
+.vs--mobile-item,
+.vsm--item,
+.vsm--mobile-bg,
+.router-link-exact-active {
+  border-top-right-radius: 15px;
+  // border-bottom-right-radius: 15px;
 }
 </style>

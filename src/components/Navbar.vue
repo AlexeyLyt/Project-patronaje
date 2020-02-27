@@ -190,6 +190,9 @@ body {
 .main-navbar {
   height: 10vh;
 }
+#main-navbar {
+  border-bottom: 3px solid black;
+}
 .vnb {
   font-family: "Montserrat", sans-serif;
   padding-left: 100px;
