@@ -18,6 +18,15 @@ import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 Vue.use(VueSidebarMenu)
 
+import YmapPlugin from 'vue-yandex-maps'
+Vue.use(YmapPlugin, settings)
+const settings = {
+  apiKey: '8944b466-0be1-4b52-9ee1-fd220c7cd137',
+  lang: 'ru_RU',
+  coordorder: 'latlong',
+  version: '2.1'
+}
+
 // import { Tabs, Tab } from '@hiendv/vue-tabs'
 // Vue.use(Tabs, Tab)
 

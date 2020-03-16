@@ -22,6 +22,7 @@
     </transition>
     <FirstSection />
     <SecondSection />
+    <MapSection />
     <!-- </vue-scroll> -->
   </div>
 </template>
@@ -34,10 +35,11 @@ import Slider from "@/components/HomePage/Slider.vue";
 import Navbar from "@/components/Navbar.vue";
 import FirstSection from "@/components/HomePage/FirstSection.vue";
 import SecondSection from "@/components/HomePage/SecondSection.vue"
+import MapSection from "@/components/MapSection.vue"
 /* eslint-disable no-console */
 export default {
   name: "app",
-  components: { Slider, Navbar, FirstSection, SecondSection },
+  components: { Slider, Navbar, FirstSection, SecondSection, MapSection },
   props: {
     // menu: {
     //   type: Array,

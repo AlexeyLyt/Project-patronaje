@@ -191,7 +191,7 @@ body {
   height: 10vh;
 }
 #main-navbar {
-  border-bottom: 3px solid black;
+  // border-bottom: 3px solid black;
 }
 .vnb {
   font-family: "Montserrat", sans-serif;

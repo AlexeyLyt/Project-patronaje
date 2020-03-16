@@ -27,6 +27,7 @@
     "vue-sidebar-menu": "^4.5.1",
     "vue-smooth-scrollbar": "^0.1.2",
     "vue-tabs": "^0.3.1",
+    "vue-yandex-maps": "^0.10.6",
     "vuescroll": "^4.14.4"
   },
   "devDependencies": {
