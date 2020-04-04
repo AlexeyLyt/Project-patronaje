@@ -1,61 +1,5 @@
 <template>
-  <b-container fluid>
-
-    <!-- <template >
-      <div class="feature-dropdown">
-        <div class="dropdown--section_title">Design</div>
-        <div class="dropdown-wrap">
-          <a href="#" class="dropdown-wrap__content type1">
-            <slideshow-svg />
-            <span>Design1</span>
-          </a>
-          <a href="#" class="dropdown-wrap__content type1">
-            <slideshow-svg />
-            <span>Design2</span>
-          </a>
-        </div>
-        <div class="dropdown--section_title">Prototyping</div>
-        <div class="dropdown-wrap">
-          <a href="#" class="dropdown-wrap__content type1">
-            <file-svg />
-            <span>Prototype1</span>
-          </a>
-          <a href="#" class="dropdown-wrap__content type1">
-            <file-svg />
-            <span>Prototype2</span>
-          </a>
-        </div>
-      </div>
-    </template>
-
-    <div class="enterprise-dropdown">
-      <div class="dropdown-wrap">
-        <a href="#" class="dropdown-wrap__content type2">
-          <dollar-svg style="min-width: 24px" />
-          <div>
-            <div class="content--top">Enterprise</div>
-            <div class="content--bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="enterprise-dropdown">
-      <div class="dropdown-wrap">
-        <a href="#" class="dropdown-wrap__content type1">
-          <dollar-svg />
-          <span>Price1</span>
-        </a>
-        <a href="#" class="dropdown-wrap__content type1">
-          <dollar-svg />
-          <span>Price2</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="mobile-content">
-      Mobile Content
-    </div> -->
+  <b-container class="container-menu" fluid>
 
     <vsm-menu :menu="menu">
       <template #default="data">
@@ -68,21 +12,19 @@
           class="content--secondary"
         />
       </template>
-      <li
-        slot="before-nav"
-        class="logo vsm-section vsm-mob-full"
-      >
+      <!-- Лого(слева) -->
+      <!-- <li slot="before-nav" class="logo vsm-section vsm-mob-full">
         <a href="#">
           <figma-logo />
         </a>
-      </li>
+      </li> -->
       <template slot="after-nav">
-        <li class="vsm-section vsm-mob-hide">
-          <!--router-link, etc-->
+        <!-- Кнопка(справа) -->
+        <!-- <li class="vsm-section vsm-mob-hide">
           <a href="#" class="vsm-link signup">
             Sign In
           </a>
-        </li>
+        </li> -->
         <!--Display mobile menu-->
         <vsm-mob>
           <mobile-content />
@@ -90,37 +32,31 @@
       </template>
     </vsm-menu>
 
-    <!-- <div class="header">
-      <div class="logo header-item">
-        <a>
-          <img src="../assets/lockup-color.png" alt="">
-        </a>
-      </div>
-      <div class="adress header-item">
-        <div class="icon"></div>
-        <div class="text"></div>
-      </div>
-      <div class="mail header-item"></div>
-      <div class="phone header-item"></div>
-      <div class="callback header-item"></div>
-    </div> -->
-    <!-- <vue-navigation-bar :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar> -->
   </b-container>
 </template>
 
 <script>
-  // import "vue-navigation-bar/dist/vue-navigation-bar.css";
-  import Features from './Feature-dropdown'
+  import Services from './ServicesDropdownContent'
+  import Nurses_1 from './NursesDropdownContent_1'
+  import Nurses_2 from './NursesDropdownContent_2'
+
 export default {
-  components: { Features },
+  components: { 
+    Services,
+    Nurses_1,
+    Nurses_2
+  },
   data() {
     return {
       menu: [
-        { title: 'УСЛУГИ', dropdown: 'features', content: Features },
-        { title: 'Enterprise', dropdown: 'enterprise', content: 'enterpriseDropdownTop', secondaryContent: 'enterpriseDropdownBottom' },
-        { title: 'Customers', attributes: { href: '#' } },
-        { title: 'Github', attributes: { href: 'https://github.com/Alexeykhr/vue-stripe-menu', target: '_blank' } },
-        { title: 'Login', attributes: { href: '#' } }
+        { title: 'УСЛУГИ', dropdown: 'features', content: Services },
+        { title: 'СИДЕЛКИ', dropdown: 'enterprise', content: Nurses_1, secondaryContent: Nurses_2 },
+        { title: 'СТОИМОСТЬ', attributes: { href: '#' } },
+        { title: 'ОТЗЫВЫ', attributes: { href: 'https://github.com/Alexeykhr/vue-stripe-menu', target: '_blank' } },
+        { title: 'О КОМПАНИИ', attributes: { href: '#' } },
+        { title: 'ВАКАНСИИ', attributes: { href: '#' } },
+        { title: 'КОНТАКТЫ', attributes: { href: '#' } },
+        { title: 'СТАТЬИ', attributes: { href: '#' } }
       ]
     };
   },
@@ -153,13 +89,17 @@ body {
   line-height: 1.5;
 }
 
-.vsm-menu {
-  margin: 10px;
-  position: relative;
-  z-index: 999999;
-  ul {
-    max-width: 1024px;
-    margin: 0 auto;
+.container-menu {
+  padding: 0 !important;
+  .vsm-menu {
+    margin: 10px 0;
+    width: 100%;
+    position: absolute;
+    z-index: 999999;
+    ul {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -167,10 +107,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.logo {
-  flex: 1 1 auto;
 }
 
 .vsm-section_menu {
@@ -183,11 +119,12 @@ body {
 
 .vsm-link {
   position: relative;
-  color: #000000a8 !important;
+  color: white !important;
   font-weight: 900 !important;
   text-decoration: none;
   &:hover {
-    color: var(--link);
+    color: hsla(0,0%,100%,.7) !important;
+    text-decoration: none;
   }
 }
 
@@ -239,15 +176,27 @@ body {
   .link {
     font-size: 15px;
     font-weight: 700;
+    line-height: 16px;
+    &:hover {
+      text-decoration: none;
+      .small-text {
+        text-decoration: none;
+      }
+    }
   }
   .small-text {
     // width: 100%;
+    color: black;
     font-size: 13px;
     font-weight: 700;
   }
   &:hover {
     background: #2497ff;
     transition: background .3s;
+    text-decoration: none;
+    .link, .small-text {
+      color: white;
+    }
   }
   &:not(:last-child) {
     // margin-bottom: 5px;
