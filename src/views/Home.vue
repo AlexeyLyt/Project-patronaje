@@ -10,7 +10,7 @@
       <Slider />
     <!-- </div> -->
     <transition name="fade">
-      <sidebar-menu
+      <!-- <sidebar-menu
         v-if="this.scrolled"
         :menu="menu"
         :collapsed="true"
@@ -18,7 +18,7 @@
         :show-one-child="true"
         @toggle-collapse="onToggleCollapse"
         @item-click="onItemClick"
-      />
+      /> -->
     </transition>
     <FirstSection />
     <SecondSection />
@@ -32,7 +32,7 @@ const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
 }
 import Slider from "@/components/HomePage/Slider.vue";
-import Navbar from "@/components/Navbar.vue";
+import Navbar from "@/components/NavBar/Navbar.vue";
 import FirstSection from "@/components/HomePage/FirstSection.vue";
 import SecondSection from "@/components/HomePage/SecondSection.vue"
 import MapSection from "@/components/MapSection.vue"
@@ -280,11 +280,11 @@ export default {
   height: 2000px;
 }
 .container-nav {
-  position: fixed;
-  height: 6.6vh;
-  z-index: 200;
+  // height: 6.6vh;
+  // top: 0;
+  // position: fixed;
+  // z-index: 200;
   // background: black;
-  top: 0;
 }
 .vsm--link_hover,
 .vs--mobile-item,

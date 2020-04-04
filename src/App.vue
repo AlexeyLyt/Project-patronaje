@@ -18,6 +18,7 @@ export default { }
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap&subset=cyrillic');
+@import url('../styles/App.scss');
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

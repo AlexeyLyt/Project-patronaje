@@ -188,7 +188,7 @@ export default {
       left: 0;
       top: 0;
       right: 0;
-      bottom: 350px;
+      bottom: 325px;
       background: #32325d;
       transform: skewY(-12deg);
     }
