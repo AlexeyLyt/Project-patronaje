@@ -31,7 +31,6 @@
         </vsm-mob>
       </template>
     </vsm-menu>
-
   </b-container>
 </template>
 
@@ -97,7 +96,7 @@ body {
     position: absolute;
     z-index: 999999;
     ul {
-      max-width: 1024px;
+      // max-width: 1024px;
       margin: 0 auto;
     }
   }
@@ -110,6 +109,9 @@ body {
 }
 
 .vsm-section_menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   > * {
     padding: 0 25px;
     font-weight: 500;
@@ -121,7 +123,9 @@ body {
   position: relative;
   color: white !important;
   font-weight: 900 !important;
+  font-size: 22px !important; // изменять размер шритфа при уменьшении разрешения
   text-decoration: none;
+  padding: 0 11px !important; // изменять при уменьшении разрешения
   &:hover {
     color: hsla(0,0%,100%,.7) !important;
     text-decoration: none;
@@ -225,5 +229,14 @@ body {
 .enterprise-dropdown {
   width: 400px;
 }
+
+// .vsm--link_hover,
+// .vs--mobile-item,
+// .vsm--item,
+// .vsm--mobile-bg,
+// .router-link-exact-active {
+//   border-top-right-radius: 15px;
+//   // border-bottom-right-radius: 15px;
+// }
 
 </style>

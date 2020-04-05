@@ -1,6 +1,7 @@
 <template>
   <!-- swiper -->
   <swiper :options="swiperOption">
+
     <swiper-slide>
       <div class="item-wrapper">
         <div class="item-background">
@@ -10,44 +11,17 @@
           <span></span>
           <span></span>
         </div>
-        <div class="item-content">
-          <!-- <tabs :show.sync="show" class="my-tabs">
-            <template v-slot:nav="{ items }">
-              <div class="my-items">
-                <a
-                  v-for="(item, index) in items" :key="index"
-                  href="#" :class="{ 'my-item': true, 'active': show === index }"
-                  @click.prevent="show = index"
-                >{{ item.title }}</a>
-              </div>
-            </template>
-            <tab title="First">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna.
-            </tab>
-
-            <tab title="Second">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </tab>
-
-            <tab title="Third">
-              Duis aute irure dolor in reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat nulla pariatur.
-            </tab>
-          </tabs> -->
-          <!-- <b-card no-body>
-            <b-tabs pills card vertical>
-              <b-tab title="Tab 1" active><b-card-text>Tab contents 1</b-card-text></b-tab>
-              <b-tab title="Tab 2"><b-card-text>Tab contents 2</b-card-text></b-tab>
-              <b-tab title="Tab 3"><b-card-text>Tab contents 3</b-card-text></b-tab>
-            </b-tabs>
-          </b-card> -->
-        </div>
+        <b-container class="item-content container-lg">
+          <div>
+            <h2><span>Lorem ipsum dolor sit amet</span> consectetur adipiscing elit, sed do</h2>
+            <h4>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</h4>
+          </div>
+        </b-container>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </swiper-slide>
+
     <swiper-slide>
       <div class="item-wrapper">
         <div class="item-background item-background-second">
@@ -58,27 +32,16 @@
           <span></span>
         </div>
         <div class="item-content">
-          <!-- Slide 2
-          <svg viewBox="0 0 130 130">
-            <path class="hover-fillLight" fill="#69D5F8" d="M65 10c30.376 0 55 24.624 55 55s-24.624 55-55 55-55-24.624-55-55 24.624-55 55-55z"></path>
-            <path fill="#FFF" d="M48 79.552V47.998H34.73c-.65 0-1.275.26-1.735.72L13.765 68.07a3.7 3.7 0 0 0-1.053 3.068c2.92 23.81 22.293 43.188 46.103 46.114a3.7 3.7 0 0 0 3.067-1.052L81.29 97.05c.46-.46.717-1.084.717-1.735L82 82l-31.545.005A2.454 2.454 0 0 1 48 79.552z"></path>
-            <path class="hover-fillDark" fill="#217AB7" d="M119.55 58.073L96.344 81.28c-.46.46-1.085.72-1.736.72H81.993V50.462a2.454 2.454 0 0 0-2.453-2.455H48l.002-12.613c0-.65.258-1.276.718-1.736L71.93 10.45c24.83 3.123 44.497 22.79 47.62 47.623z"></path>
-          </svg> -->
-          <!-- <svg viewBox="0 0 130 130">
-            <path class="hover-fillLight" fill="#76E5A2" d="M65 10c30.376 0 55 24.624 55 55s-24.624 55-55 55-55-24.624-55-55 24.624-55 55-55z"></path>
-            <path fill="#FFF" d="M102.274 27.78v-.002c-9.628-9.615-22.968-15.526-37.69-15.408-28.292.228-51.557 23.072-52.238 51.32-.22 9.175 1.915 17.832 5.84 25.416.1.192.317.29.526.24.003 0 .006 0 .01-.002a.462.462 0 0 0 .324-.616c-5.15-13.598-2.25-29.54 8.713-40.488 14.915-14.898 39.102-14.898 54.02 0L48.25 81.725c14.917 14.897 39.104 14.897 54.022 0 14.916-14.897 14.917-39.048.002-53.945z"></path>
-            <path class="hover-fillDark" fill="#159570" d="M88.198 58.794c3.435 12.802-4.173 25.96-16.992 29.39-12.82 3.43-25.997-4.166-29.43-16.968-3.436-12.802 4.17-25.96 16.99-29.39 12.82-3.43 25.997 4.166 29.43 16.968z"></path>
-          </svg> -->
-          <!-- <a href="https://github.com/vuejs/vue"> -->
             <icon style="width: 100px;"/>
-          <!-- </a> -->
         </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </swiper-slide>
+
     <!-- <swiper-slide>Slide 3</swiper-slide> -->
     <div class="swiper-pagination" slot="pagination"></div>
+
   </swiper>
 </template>
 
@@ -139,7 +102,7 @@ export default {
 
 .swiper-container {
   width: 100%;
-  height: 900px;
+  height: 760px;
   background: #f6f9fc;
   // margin-top: 11.8vh;
   // background-color: aqua;
@@ -193,7 +156,7 @@ export default {
   width: 100%;
   height: 100%;
   background: #f6f9fc;
-  padding: 0 125px;
+  // padding: 0 125px;
 
   .item-background {
     position: absolute;
@@ -306,6 +269,26 @@ export default {
   }
   .item-content {
     position: relative;
+    height: 100%;
+    padding-top: 70px;
+    div {
+      h2 {
+        text-align: left;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 0;
+        span {
+          display: contents;
+          font-weight: 900;
+        }
+      }
+      h4 {
+        text-align: left;
+        color: white;
+        font-size: 16px;
+        font-weight: 900;
+      }
+    }
   }
 }
 

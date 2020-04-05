@@ -93,12 +93,12 @@ ul, ol {
 .first-section {
   font-family: 'Nunito', sans-serif;
   position: relative;
-  padding-top: 120px;
+  padding-top: 10px;
   background: #f6f9fc;
   z-index: 1;
   overflow: hidden;
   .container-lg {
-    max-width: 1040px;
+    // max-width: 1040px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;

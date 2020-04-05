@@ -4,12 +4,12 @@
             <h3>Как к нам пройти</h3>
             <div class="map-ways">
                 <span class="text-way">Добраться до офиса от метро можно двумя способами</span>
-                <div class="first-way way">
+                <!-- <div class="first-way way">
                     <span>м. Электозаводская</span>
                 </div>
                 <div class="second-way way">
                     <span>м. Семёновская</span>
-                </div>
+                </div> -->
             </div>
             <b-container>
                 <yandex-map 
@@ -35,7 +35,8 @@
                     />
                 </yandex-map>
             </b-container>
-            <div class="footer-block"></div>
+            <Footer />
+            <div class="footer-background"></div>
         </div>
     </div>
 </template>
@@ -43,8 +44,10 @@
 <script>
 import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 import { coordLinesElectro, coordLinesSemen } from './Coordinate'
+import Footer from './Footer'
+
 export default {
-  components: { yandexMap, ymapMarker },
+  components: { yandexMap, ymapMarker, Footer },
   data() {
     return {
         coords: [55.782782107260545,37.712498275463034],
@@ -72,6 +75,7 @@ export default {
         position: relative;
         h3 {
             margin-bottom: 0;
+            font-weight: 800;
         }
         .map-ways {
             display: flex;
@@ -82,7 +86,7 @@ export default {
                 width: 100%;
                 font-size: 14px;
                 font-weight: bold;
-                margin-bottom: 30px;
+                // margin-bottom: 30px;
             }
             .first-way {
                 &:before {
@@ -92,7 +96,7 @@ export default {
                     height: 40px;
                     right: -25px;
                     top: 25px;
-                    background: url('../assets/maps-and-flags.png') center center / contain no-repeat;
+                    background: url('../../assets/maps-and-flags.png') center center / contain no-repeat;
                 }
                 span {
                     &:before {
@@ -133,11 +137,11 @@ export default {
             }
         }
     }
-    .footer-block {
+    .footer-background {
         width: 100%;
-        height: 500px;
+        min-height: 415px;
         position: absolute;
-        top: 370px;
+        top: 250px;
         z-index: -1;
         background: #32325d;
     }

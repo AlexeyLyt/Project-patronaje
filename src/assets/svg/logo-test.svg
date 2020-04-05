@@ -1,7 +1,7 @@
-<svg id="PRINT" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.59 39.56">
+<svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.59 39.56">
 	<defs>
 		<style>
-			.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#aad7f3;}.cls-3{font-size:23.58px;fill:#29abe2;font-family:'Nunito', sans-serif;}.cls-3,.cls-7{font-weight:700;font-style:italic;}.cls-4{letter-spacing:-0.02em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:-0.03em;}.cls-7{font-size:10px;fill:#231f20;font-family:PFBeauSansPro-BoldItalic, PF BeauSans Pro;}
+			.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#aad7f3;}.cls-3{font-size:23.58px;fill:#29abe2;font-family:'Nunito', sans-serif;}.cls-3,.cls-7{font-weight:700;}.cls-4{letter-spacing:-0.02em;}.cls-5{letter-spacing:0em;}.cls-6{letter-spacing:-0.03em;}.cls-7{font-size:10px;fill:#231f20;font-family:'Nunito', sans-serif;}
 		</style>
 		<linearGradient id="linear-gradient" x1="49.3" y1="34.87" x2="78" y2="62.12" gradientUnits="userSpaceOnUse">
 			<stop offset="0" stop-color="#4dbdd3" />
@@ -18,7 +18,7 @@
 	<text class="cls-3" transform="translate(41.88 25.38) scale(0.94 1)">
 		GrandPersonal
 	</text>
-	<text class="cls-7" transform="translate(43.84 33.02)">
+	<text id="logo-text" class="cls-7" transform="translate(46.84 35.02)">
 		Патронажная служба Москвы
 	</text>
 </svg>
