@@ -27,7 +27,7 @@
         </li> -->
         <!--Display mobile menu-->
         <vsm-mob>
-          <mobile-content />
+          <!-- <mobile-content /> -->
         </vsm-mob>
       </template>
     </vsm-menu>

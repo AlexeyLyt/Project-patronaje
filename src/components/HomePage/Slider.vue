@@ -30,30 +30,10 @@
                 <a href="#" class="slider-item-left-second-btn">Цены</a>
               </div>
             </div>
+            
+            <!-- Главная форма заявки -->
+            <MainForm />
 
-            <div class="slider-item-right">
-              <div class="main-form">
-                <div class="main-form-title">
-                   <h3>Подбор сиделки</h3>
-                   <p>в день обращения</p>
-                </div>
-                <label for="name" class="main-form-label">
-                  <p>Ваше имя:</p>
-                  <input type="text" class="input-name" id="name" name="name" placeholder="Александр Савочкин">
-                </label>
-                <label for="phone" class="main-form-label">
-                  <p>Контактный телефон:</p>
-                  <input type="text" class="input-phone" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
-                </label>
-                <label for="message" class="main-form-label">
-                  <p>Пожелания:</p>
-                  <textarea class="textarea-message" name="message" id="message" placeholder="Какие-то нюансы"></textarea>
-                </label>
-                <div class="main-form-submit">
-                  <button>Заказать</button>
-                </div>
-              </div>
-            </div>
           </div>
 
         </b-container>
@@ -87,26 +67,20 @@
 
 <script>
 import "swiper/css/swiper.css";
+import MainForm from './mainForm'
 import icon from '../../assets/adress.svg'
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-
-// import { Tabs, Tab } from '@hiendv/vue-tabs'
 
 export default {
   components: {
     swiper,
     swiperSlide,
+    MainForm,
     icon
-    // Tabs, 
-    // Tab 
   },
   data() {
     return {
-      show: 1,
       swiperOption: {
-        // initialSlide: 0,
-        // slidesPerView: 1,
-        // loop: true,
         touchAngle: 100,
         shortSwipes: false,
         effect: 'coverflow',
@@ -133,8 +107,14 @@ export default {
         //   delay: 5000,
         //   disableOnInteraction: true,
         // },
+        // initialSlide: 0,
+        // slidesPerView: 1,
+        // loop: true,
       }
     };
+  },
+  methods: {
+
   }
 };
 </script>

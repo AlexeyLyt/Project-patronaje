@@ -7,7 +7,7 @@
         v-for="(item, index) in services"
         :key="index"
       >
-        <slideshow-svg />
+        <!-- <slideshow-svg /> -->
         <a class="link" :href="item.link">
           {{ item.name }}
           <br />

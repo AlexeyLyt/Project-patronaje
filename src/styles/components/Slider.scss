@@ -308,7 +308,6 @@
                                 &::placeholder {
                                     font-size: 15px;
                                 }
-                                
                             }
                             .input-phone {
 
@@ -316,6 +315,12 @@
                             .textarea-message {
                                 height: 70px;
                                 resize: none;
+                            }
+                            .error {
+                                font-size: 14px;
+                                font-weight: 700;
+                                color: #6772e5;
+                                margin: 2px 0 0 1px;
                             }
                         }
                         &-submit {
@@ -329,6 +334,9 @@
                                 border-radius: 20px;
                                 background: #6772e5;
                                 padding: 10px 45px;
+                            }
+                            .no-valid {
+                                background: #6772e5b5;
                             }
                         }
                     }
